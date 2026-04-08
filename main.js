@@ -158,11 +158,11 @@ startBtn.addEventListener("click", () => {
 
   startBtn.style.display = "none";
   document.getElementById("settings").style.display = "none";
-
-  // 👇 ADD THIS
   document.getElementById("appTitle").style.display = "none";
 
   stepContainer.style.display = "block";
+  window.scrollTo(0, 0);
+	
 	const selectedCategory = categorySelect.value;
 	let filteredTopics;
 
