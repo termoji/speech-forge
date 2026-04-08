@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Speech Forge</title>
+</head>
+<body style="text-align: center; margin: 0; font-family: 'Segoe UI', Arial, sans-serif;">
+
+	<h1 id="appTitle">Speech Forge</h1>
+
+  <!-- Start Button -->
+  <button id="startBtn">Start Session</button>
+		
+	<div id="settings" style="margin-top:20px;">
+
+		<h3>Settings</h3>
+
+		<!-- Select Category -->
+		<label for="speechCategory">Speech Category:</label>
+		<select id="speechCategory">
+			<option value="Friendship & Social Life">Friendship & Social Life</option>
+			<option value="Growing Up">Growing Up</option>
+			<option value="Holiday & Vacation">Holiday & Vacation</option>
+			<option value="Humorous">Humorous</option>
+			<option value="Inspirational">Inspirational</option>
+			<option value="Life Experience">Life Experience</option>
+			<option value="Love Life">Love Life</option>
+			<option value="Past, Present & Future">Past, Present & Future</option>
+			<option value="Tall Tales">Tall Tales</option>
+			<option value="RPTM Themes">RPTM Themes</option>
+			<option value="Turning Points">Turning Points</option>
+			<option value="What If...?">What If...?</option>
+			<option value="Work Life">Work Life</option>
+			<option value="Mixed">*** Mixed ***</option>
+		</select>
+		<br><br>
+
+		<!-- Timer Mode -->
+		<label for="timerMode">Timer Mode:</label>
+		<select id="timerMode">
+			<option value="structure">Structure Mode</option>
+			<option value="toastmasters">Toastmasters Mode</option>
+		</select>
+		<br><br>
+
+		<!-- Dark Mode -->
+		<label>
+			<input type="checkbox" id="darkModeToggle">
+			Dark Mode
+		</label>
+
+		<br><br>
+
+		<label>
+			<input type="checkbox" id="outlineTimerToggle">
+			Outline Timer
+		</label>
+
+		&nbsp;&nbsp;
+
+		<label for="outlineTimerSeconds">Seconds per field:</label>
+		<input
+			type="number"
+			id="outlineTimerSeconds"
+			min="1"
+			value="60"
+			style="width:70px;"
+		>
+
+		<br><br>
+
+		<label>
+			<input type="checkbox" id="downloadOutlineToggle">
+			Download Outline
+		</label>
+
+		<br><br>
+
+		<div>
+			<strong>Speeches Completed:</strong>
+			<span id="speechCounter">0</span>
+		</div>
+
+		<br>
+
+		<button id="resetCounterBtn">Reset Counter</button>	
+
+
+	</div>	
+  
+  <div id="outlineDisplay" style="margin-top:20px;"></div>
+
+  <!-- Step Container -->
+  <div id="stepContainer" style="display:none; margin-top:20px;">
+
+    <p id="stepTitle"></p>
+    <p id="stepHint"></p>
+
+
+
+
+		<input id="stepInput" type="text" maxlength="100" style="width:300px;" />
+
+		<div id="outlineTimerDisplay" style="
+			font-size: 24px;
+			margin-top: 10px;
+			display: none;
+		">
+			60
+		</div>
+
+		<br><br>
+		<button id="nextBtn">Next</button>
+
+
+
+
+
+  </div>
+
+	<script src="topicBank.js"></script>
+	<script src="main.js"></script>
+
+</body>
+</html>
