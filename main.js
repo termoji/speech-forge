@@ -161,7 +161,6 @@ startBtn.addEventListener("click", () => {
   document.getElementById("appTitle").style.display = "none";
 
   stepContainer.style.display = "block";
-  window.scrollTo(0, 0);
 	
 	const selectedCategory = categorySelect.value;
 	let filteredTopics;
@@ -180,6 +179,13 @@ startBtn.addEventListener("click", () => {
 
 	currentTopic = randomTopic.text;	
   loadStep();
+
+  requestAnimationFrame(() => {
+    stepContainer.scrollIntoView({
+      block: "start",
+      behavior: "instant"
+    });
+  });
 });
 
 // SPEECH COUNTER RESET
